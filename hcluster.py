@@ -19,14 +19,14 @@ newwordlist=[]
 stoplist = dict()
 dic=dict()
 
-with open("C:/Users/PCS/Desktop/NEWS Headline Clustering - WOG/stopword.txt") as stop:
+with open("stopword.txt") as stop:
     stoplist = stop.read()
    # print("before split:  ",stoplist)
     stop.close()
     stoplist=nltk.word_tokenize(stoplist)
   #  print("after split:  ",stoplist)
 itr=0
-with open("C:/Users/PCS/Desktop/NEWS Headline Clustering - WOG/abcnews-date-text1.csv",mode="r",encoding="ANSI") as file1:
+with open("abcnews-date-text1.csv",mode="r",encoding="ANSI") as file1:
 
     readfile=csv.reader(file1)
     for row in readfile:
@@ -203,7 +203,7 @@ dendrogram(Z, orientation="right" ,labels=range(1, nc+2), leaf_rotation=360)
 
 plt.tight_layout()
 
-plt.savefig('C:/Users/PCS/Desktop/NEWS Headline Clustering - WOG/complete_cluster2.png', dpi=200)
+plt.savefig('complete_cluster2.png', dpi=200)
 
 
 
